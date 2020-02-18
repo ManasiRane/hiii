@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "Status";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/notify.min.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/notify.min.js"></script>
+
+
+<body>
+    <!-- Modal -->
+    <input type="text" id="TxtTid" hidden>
+    <div class="modal  fade createpopup" id="myModalStatusCreate" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #797575">
+                    <button type="button" class="close" data-dismiss="modal">X</button>
+                    <h4 class="modal-title" style="color:#ffff">Status Type</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-groups">
+                            <label>Status Name</label>
+
+                        </div>
+                        <div class="form-groups">
+                            <input type="text" class="form-control" id="TxtSummary" style="max-width:100%">
+
+                        </div>
+                        <br />
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success " id="BtnSave">Save</button>
+
+                    <button type="button" class="btn btn-danger " id="BtnCloseCreate" data-dismiss="modal">Close</button>
+                    @*<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>*@
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal  fade createpopup" id="myModalStatusEdit" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #797575">
+                    <button type="button" class="close" data-dismiss="modal">X</button>
+                    <h4 class="modal-title" style="color:#ffff">Status</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-groups">
+                            <label>Status Name</label>
+
+                        </div>
+                        <div class="form-groups">
+                            <input type="text" class="form-control" id="TxtSummary" style="max-width:100%">
+
+                        </div>
+                        <br />
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success " id="BtnSave">Update</button>
+
+                    <button type="button" class="btn btn-danger " id="BtnCloseCreate" data-dismiss="modal">Close</button>
+                    @*<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>*@
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <form id="form1">
+        <div class="text-right addformbtn">
+            <button type="button" id="BtnOpenForm" class="btn btn-success" data-toggle="modal" data-target="#myModalStatusCreate">Create</button>
+        </div>
+        <br /><br />
+        <table id="tbl" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+
+                    <th style="display:none">
+                        Uid
+                    </th>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Type Name
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="PTbody"></tbody>
+        </table>
+    </form>
+
+    <form id="form1">
+        <div class="text-right addformbtn">
+            <button type="button" id="BtnOpenForm" class="btn btn-success" data-toggle="modal" data-target="#myModalStatusEdit">Edit</button>
+        </div>
+        <br /><br />
+    </form>
+
+</body>
+
+
